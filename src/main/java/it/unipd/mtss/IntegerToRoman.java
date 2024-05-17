@@ -11,14 +11,20 @@ public class IntegerToRoman {
 
     public static String convert(int number){
 
-        if (number > 0 && number < 11){
+        if (number > 0 && number < 21){
             char[] char_numero = String.valueOf(number).toCharArray();
+                
             String outString = "";
 
             if (char_numero.length == 1) {
                 outString += unita[Integer.parseInt(String.valueOf(char_numero[0]))];
             } else {
-                outString += "X";
+                    
+                if(Integer.parseInt(String.valueOf(char_numero[0])) == 1){
+                    outString += "X";
+                } else {
+                    outString += "XX";
+                }
                 outString += unita[Integer.parseInt(String.valueOf(char_numero[1]))];
             }
 

@@ -25,6 +25,8 @@ public class IntegerToRomanTest {
         assertEquals("VI", IntegerToRoman.convert(6));
     }
 
+    // --- PRIMI 10 NUMERI ---
+    //7 - 8 - 9 - 10
     @Test
     public void testPrimi10() {
         assertEquals("VII", IntegerToRoman.convert(7));
@@ -46,8 +48,20 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testPrimi50() {
+        assertEquals("XXIV", IntegerToRoman.convert(24));
+        assertEquals("XXVII", IntegerToRoman.convert(27));
+        assertEquals("XXXII", IntegerToRoman.convert(32));
+        assertEquals("XXXIX", IntegerToRoman.convert(39));
+        assertEquals("XL", IntegerToRoman.convert(40));
+        assertEquals("XLIV", IntegerToRoman.convert(44));
+        assertEquals("XLIX", IntegerToRoman.convert(49));
+        assertEquals("L", IntegerToRoman.convert(50));
+    }
+
+    @Test
     public void testLimiti() {
         assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(-1));
-        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(24));
+        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(56));
     }
 }

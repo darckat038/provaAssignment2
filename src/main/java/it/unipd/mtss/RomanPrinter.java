@@ -22,6 +22,7 @@ public class RomanPrinter {
             return "Errore: Input non numerico intero!";
         }
     }
+    
 
     //Costruttore con firma variabile Double -->
     //Per errore se viene passato come input un valore dobule, quindi non int.

@@ -89,9 +89,27 @@ public class IntegerToRomanTest {
         assertEquals("D", IntegerToRoman.convert(500));
     }
 
+    // --- PRIMI 1000 NUMERI ---
+    //502 - 525  - 570  - 599   - 624    - 647     - 789       - 868        - 952   - 989 -      1000
+    //DII - DXXV - DLXX - DXCIX - DCXXIV - DCXLVII - DCCLXXXIX - DCCCLXVIII - CMLII - CMLXXXIX - M
+    @Test
+    public void testPrimi1000() {
+        assertEquals("DII", IntegerToRoman.convert(502));
+        assertEquals("DXXV", IntegerToRoman.convert(525));
+        assertEquals("DLXX", IntegerToRoman.convert(570));
+        assertEquals("DXCIX", IntegerToRoman.convert(599));
+        assertEquals("DCXXIV", IntegerToRoman.convert(624));
+        assertEquals("DCXLVII", IntegerToRoman.convert(647));
+        assertEquals("DCCLXXXIX", IntegerToRoman.convert(789));
+        assertEquals("DCCCLXVIII", IntegerToRoman.convert(868));
+        assertEquals("CMLII", IntegerToRoman.convert(952));
+        assertEquals("CMLXXXIX", IntegerToRoman.convert(989));
+        assertEquals("M", IntegerToRoman.convert(1000));
+    }
+
     @Test
     public void testLimiti() {
         assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(-1));
-        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(523));
+        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(1023));
     }
 }

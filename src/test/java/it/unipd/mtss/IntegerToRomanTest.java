@@ -77,8 +77,21 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testPrimi500() {
+        assertEquals("CI", IntegerToRoman.convert(101));
+        assertEquals("CIV", IntegerToRoman.convert(104));
+        assertEquals("CXXIII", IntegerToRoman.convert(123));
+        assertEquals("CCLIV", IntegerToRoman.convert(254));
+        assertEquals("CCCLXV", IntegerToRoman.convert(365));
+        assertEquals("CCCXCIX", IntegerToRoman.convert(399));
+        assertEquals("CDLVI", IntegerToRoman.convert(456));
+        assertEquals("CDLXXXII", IntegerToRoman.convert(482));
+        assertEquals("D", IntegerToRoman.convert(500));
+    }
+
+    @Test
     public void testLimiti() {
         assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(-1));
-        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(142));
+        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(523));
     }
 }

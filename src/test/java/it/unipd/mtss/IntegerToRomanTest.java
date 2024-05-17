@@ -19,8 +19,15 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testPrimi6() {
+        assertEquals("IV", IntegerToRoman.convert(4));
+        assertEquals("V", IntegerToRoman.convert(5));
+        assertEquals("VI", IntegerToRoman.convert(6));
+    }
+
+    @Test
     public void testLimiti() {
         assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(-1));
-        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(5));
+        assertEquals("Errore: Numero non rispetta le PRE-Condizioni del Programma", IntegerToRoman.convert(8));
     }
 }

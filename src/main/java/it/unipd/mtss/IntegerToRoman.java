@@ -7,15 +7,12 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
 
+    private static String[] unita = {"","I","II","III","IV","V","VI"};
+
     public static String convert(int number){
-        if (number > 0 && number < 4){
-            if (number == 1){
-                return "I";
-            } else if (number == 2){
-                return "II";
-            } else {
-                return "III";
-            }
+
+        if (number > 0 && number < 7){
+            return unita[number];
         }
         return "Errore: Numero non rispetta le PRE-Condizioni del Programma";
     }

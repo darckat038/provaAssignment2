@@ -22,12 +22,22 @@ public class RomanPrinter {
                              "  _| |_ ",
                              " |_____|"};
 
+        //Lettera V
+        String[] letter_V = {" __      __",
+                             " \\ \\    / /",
+                             "  \\ \\  / / ",
+                             "   \\ \\/ /  ",
+                             "    \\  /   ",
+                             "     \\/    "};
+
         for (int i = 0; i < 6; i++){
             for (int j = 0; j < romanNumber.length(); j++){
 
                 //Inserisco in stringa di output rispettiva riga della lettera I
                 if (romanNumber_char[j]=='I'){
                     outString += letter_I[i] + " ";
+                } else if ( romanNumber_char[j]=='V') {
+                    outString += letter_V[i] + " ";
                 }
             }
             outString += "\n";

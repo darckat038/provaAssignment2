@@ -7,9 +7,16 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
 
-    public static String convert(int number) {
-        
-        // TODO
-        return null;
+    public static String convert(int number){
+        if (number > 0 && number < 4){
+            if (number == 1){
+                return "I";
+            } else if (number == 2){
+                return "II";
+            } else {
+                return "III";
+            }
+        }
+        return "Errore: Numero non rispetta le PRE-Condizioni del Programma";
     }
 }
